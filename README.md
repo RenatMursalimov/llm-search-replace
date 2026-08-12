@@ -5,7 +5,7 @@ Apply LLM code edits by **exact quote**, not by line number.
 Zero dependencies. Python 3.9+. MIT.
 
 ```bash
-pip install llm-search-replace
+pip install git+https://github.com/RenatMursalimov/llm-search-replace
 ```
 
 ## The problem
