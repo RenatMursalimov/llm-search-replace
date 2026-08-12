@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llm-search-replace"
+version = "0.1.0"
+description = "Apply LLM code edits by exact-quote SEARCH/REPLACE instead of line-numbered diffs. All-or-nothing, no guessing, zero dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Renat Mursalimov" }]
+keywords = ["llm", "agent", "code-editing", "diff", "aider"]
+dependencies = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Text Processing :: General",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/RenatMursalimov/llm-search-replace"
+Issues = "https://github.com/RenatMursalimov/llm-search-replace/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llm_search_replace"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
